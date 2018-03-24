@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<pre id="log"></pre>
+<script>
+    // helper function: log message to screen
+
+    log = msg => {
+        document.getElementById('log').textContent += msg + '\n';
+    }
+
+    // setup websocket with callbacks
+    var ws = new WebSocket('ws://localhost:8080/123');
+
+    var debug = {hello: "world"};
+    var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});
+
+    ws.onopen = function() {
+        log('CONNECT');
+    };
+    ws.onclose = function() {
+        log('DISCONNECT');
+    };
+    ws.onmessage = function(event) {
+        log(event.data);
+        log(JSON.parse(event.data))
+    };
+</script>

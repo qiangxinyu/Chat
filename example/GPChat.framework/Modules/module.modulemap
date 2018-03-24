@@ -1,0 +1,11 @@
+framework module GPChat {
+  umbrella header "GPChat.h"
+
+  export *
+  module * { export * }
+}
+
+module GPChat.Swift {
+    header "GPChat-Swift.h"
+    requires objc
+}

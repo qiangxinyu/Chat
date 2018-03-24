@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l4w-z6-KqY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-DY-t2H">
+                                <rect key="frame" x="172" y="350.5" width="31" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZy-Fh-5uX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-8k-ssW">
+                                <rect key="frame" x="87.5" y="299" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4u2-61-Vco"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMm-sG-ObY">
+                                <rect key="frame" x="157.5" y="158" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9pB-bZ-cNT"/>
+                                    <constraint firstAttribute="height" constant="60" id="vhA-IK-adN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="clickAvatar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OD8-ia-GpU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mn1-aN-d6E">
+                                <rect key="frame" x="87.5" y="261" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LeD-gu-CkT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OND-kJ-TQZ">
+                                <rect key="frame" x="137.5" y="148" width="100" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hMN-sp-Dam"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mn1-aN-d6E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="54f-Ys-MkL"/>
+                            <constraint firstItem="oVv-8k-ssW" firstAttribute="top" secondItem="bMm-sG-ObY" secondAttribute="bottom" constant="81" id="DGw-tn-Svs"/>
+                            <constraint firstItem="RRf-DY-t2H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HoN-nf-0jF"/>
+                            <constraint firstItem="RRf-DY-t2H" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="N1W-A8-DTD"/>
+                            <constraint firstItem="oVv-8k-ssW" firstAttribute="top" secondItem="mn1-aN-d6E" secondAttribute="bottom" constant="8" id="Z9c-F2-hIl"/>
+                            <constraint firstItem="oVv-8k-ssW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aAa-P1-TSr"/>
+                            <constraint firstItem="RRf-DY-t2H" firstAttribute="top" secondItem="oVv-8k-ssW" secondAttribute="bottom" constant="21.5" id="hSw-jb-vGN"/>
+                            <constraint firstItem="bMm-sG-ObY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lnh-OY-Gok"/>
+                            <constraint firstItem="bMm-sG-ObY" firstAttribute="top" secondItem="OND-kJ-TQZ" secondAttribute="bottom" constant="8" id="luH-yT-gEG"/>
+                            <constraint firstItem="OND-kJ-TQZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x4R-6o-4jm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RoW-oG-2oY"/>
+                    <connections>
+                        <outlet property="avatarBtn" destination="bMm-sG-ObY" id="bDQ-qk-xnB"/>
+                        <outlet property="idTF" destination="oVv-8k-ssW" id="PP2-5e-WVM"/>
+                        <outlet property="nameTF" destination="mn1-aN-d6E" id="GJl-Y0-Wv1"/>
+                        <outlet property="progressView" destination="OND-kJ-TQZ" id="1vc-Vy-EK1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dIY-69-Xsj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l4w-z6-KqY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Eh-Mk-YSS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fVA-xB-gtC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBN-09-EMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="133"/>
+        </scene>
+    </scenes>
+</document>

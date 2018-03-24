@@ -1,0 +1,10 @@
+.DS_Store
+
+example/Pods
+
+
+GPChat/Pods
+
+
+server/.idea
+server/node_modules

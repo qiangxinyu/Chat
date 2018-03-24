@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageInputView" customModule="GPChat" customModuleProvider="target">
+            <connections>
+                <outlet property="soundRecondingBtn" destination="BZr-hQ-2Kl" id="BQk-l0-L2N"/>
+                <outlet property="textView" destination="jWZ-IJ-sIQ" id="vEu-yt-Yjl"/>
+                <outlet property="voiceBtn" destination="SNS-t6-18V" id="UaD-tb-8Qf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="268" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNS-t6-18V">
+                    <rect key="frame" x="10" y="10" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="fIV-76-FUc"/>
+                        <constraint firstAttribute="width" secondItem="SNS-t6-18V" secondAttribute="height" multiplier="1:1" id="qbR-ni-YLa"/>
+                    </constraints>
+                    <state key="normal" image="recorder_icon.png"/>
+                    <state key="selected" image="keyboard_icon.png"/>
+                    <connections>
+                        <action selector="clickVoiceBtn:" destination="-1" eventType="touchUpInside" id="lqG-5q-aBb"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jWZ-IJ-sIQ">
+                    <rect key="frame" x="50" y="7" width="168" height="36"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="k17-SN-hkO"/>
+                    </connections>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-hO-D21">
+                    <rect key="frame" x="228" y="10" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="ubF-DQ-GBZ"/>
+                    </constraints>
+                    <state key="normal" image="more_icon.png"/>
+                    <connections>
+                        <action selector="clickFunctionBtn:" destination="-1" eventType="touchUpInside" id="HnQ-Fs-jVh"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuE-qI-if2">
+                    <rect key="frame" x="0.0" y="0.0" width="268" height="1"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.8666666666666667" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Wfa-TP-Ubk"/>
+                    </constraints>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZr-hQ-2Kl">
+                    <rect key="frame" x="50" y="7" width="168" height="36"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="audio_icon.png">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" image="audio_icon_touch_down.png"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cti-tw-i3b">
+                    <rect key="frame" x="0.0" y="50" width="268" height="1"/>
+                    <color key="backgroundColor" red="0.83921568627450982" green="0.84313725490196079" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="wz6-uv-vd7"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvj-9m-otA">
+                    <rect key="frame" x="0.0" y="51" width="133.5" height="64"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="album_icon.png"/>
+                    <connections>
+                        <action selector="clickPhotoBtn:" destination="-1" eventType="touchUpInside" id="nGf-KL-KGU"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-si-gMh">
+                    <rect key="frame" x="133.5" y="51" width="1" height="64"/>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.84313725490000002" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="1AK-qo-2Rb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-kw-wr8">
+                    <rect key="frame" x="134.5" y="51" width="133.5" height="64"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="camera_icon.png"/>
+                    <connections>
+                        <action selector="clickCameraBtn:" destination="-1" eventType="touchUpInside" id="uof-rJ-RNC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YT2-kw-wr8" firstAttribute="leading" secondItem="Yvj-9m-otA" secondAttribute="trailing" constant="1" id="2aS-z0-ATd"/>
+                <constraint firstItem="cti-tw-i3b" firstAttribute="top" secondItem="jWZ-IJ-sIQ" secondAttribute="bottom" constant="7" id="593-pF-m7R"/>
+                <constraint firstAttribute="trailing" secondItem="AQ0-hO-D21" secondAttribute="trailing" constant="10" id="6ko-6w-6DO"/>
+                <constraint firstItem="YT2-kw-wr8" firstAttribute="top" secondItem="cti-tw-i3b" secondAttribute="bottom" id="8FZ-B4-kL9"/>
+                <constraint firstItem="YT2-kw-wr8" firstAttribute="width" secondItem="Yvj-9m-otA" secondAttribute="width" id="9dk-jb-ilw"/>
+                <constraint firstItem="AQ0-hO-D21" firstAttribute="leading" secondItem="jWZ-IJ-sIQ" secondAttribute="trailing" constant="10" id="Cbd-cU-43W"/>
+                <constraint firstItem="BZr-hQ-2Kl" firstAttribute="width" secondItem="jWZ-IJ-sIQ" secondAttribute="width" id="FwQ-p0-aWa"/>
+                <constraint firstItem="BZr-hQ-2Kl" firstAttribute="centerY" secondItem="jWZ-IJ-sIQ" secondAttribute="centerY" id="ILw-bV-mU2"/>
+                <constraint firstItem="cti-tw-i3b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KDx-bV-otp"/>
+                <constraint firstAttribute="trailing" secondItem="KuE-qI-if2" secondAttribute="trailing" id="MV7-tL-Kfy"/>
+                <constraint firstItem="Yvj-9m-otA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OgH-8H-DaH"/>
+                <constraint firstAttribute="trailing" secondItem="cti-tw-i3b" secondAttribute="trailing" id="P2i-6K-fK4"/>
+                <constraint firstItem="SNS-t6-18V" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Qvv-2c-6jo"/>
+                <constraint firstItem="2qZ-si-gMh" firstAttribute="top" secondItem="cti-tw-i3b" secondAttribute="bottom" id="RkJ-uG-lwJ"/>
+                <constraint firstAttribute="bottom" secondItem="2qZ-si-gMh" secondAttribute="bottom" id="UAc-80-5ie"/>
+                <constraint firstAttribute="bottom" secondItem="cti-tw-i3b" secondAttribute="bottom" constant="64" id="acN-C1-SJ4"/>
+                <constraint firstItem="cti-tw-i3b" firstAttribute="top" secondItem="SNS-t6-18V" secondAttribute="bottom" constant="10" id="ajr-P7-pWx"/>
+                <constraint firstItem="AQ0-hO-D21" firstAttribute="width" secondItem="AQ0-hO-D21" secondAttribute="height" multiplier="1:1" id="fbi-mG-FIv"/>
+                <constraint firstItem="BZr-hQ-2Kl" firstAttribute="centerX" secondItem="jWZ-IJ-sIQ" secondAttribute="centerX" id="gbw-nq-7Ra"/>
+                <constraint firstAttribute="trailing" secondItem="YT2-kw-wr8" secondAttribute="trailing" id="hmh-F2-ic7"/>
+                <constraint firstItem="Yvj-9m-otA" firstAttribute="top" secondItem="cti-tw-i3b" secondAttribute="bottom" id="k1x-I5-6IA"/>
+                <constraint firstAttribute="bottom" secondItem="YT2-kw-wr8" secondAttribute="bottom" id="lwi-d4-UOd"/>
+                <constraint firstItem="KuE-qI-if2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mZw-XM-3l7"/>
+                <constraint firstItem="cti-tw-i3b" firstAttribute="top" secondItem="BZr-hQ-2Kl" secondAttribute="bottom" constant="7" id="n1u-dW-1lr"/>
+                <constraint firstItem="jWZ-IJ-sIQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rpe-Ml-F2q"/>
+                <constraint firstItem="jWZ-IJ-sIQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="tfi-pN-jD6"/>
+                <constraint firstItem="YT2-kw-wr8" firstAttribute="leading" secondItem="2qZ-si-gMh" secondAttribute="trailing" id="uJ2-2e-3Jn"/>
+                <constraint firstItem="BZr-hQ-2Kl" firstAttribute="height" secondItem="jWZ-IJ-sIQ" secondAttribute="height" id="unA-Ws-zwV"/>
+                <constraint firstAttribute="bottom" secondItem="Yvj-9m-otA" secondAttribute="bottom" id="vOq-C1-m1y"/>
+                <constraint firstItem="cti-tw-i3b" firstAttribute="top" secondItem="AQ0-hO-D21" secondAttribute="bottom" constant="10" id="xUW-QK-Hhx"/>
+                <constraint firstItem="jWZ-IJ-sIQ" firstAttribute="leading" secondItem="SNS-t6-18V" secondAttribute="trailing" constant="10" id="zGw-60-GBT"/>
+                <constraint firstItem="KuE-qI-if2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zSL-Ka-3vo"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-20" y="104.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="album_icon.png" width="44" height="36"/>
+        <image name="audio_icon.png" width="32" height="14"/>
+        <image name="audio_icon_touch_down.png" width="32" height="14"/>
+        <image name="camera_icon.png" width="44" height="36"/>
+        <image name="keyboard_icon.png" width="28" height="28"/>
+        <image name="more_icon.png" width="28" height="28"/>
+        <image name="recorder_icon.png" width="28" height="28"/>
+    </resources>
+</document>

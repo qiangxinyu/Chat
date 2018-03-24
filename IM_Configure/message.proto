@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+option php_namespace = "Turbo\\Protobuf";
+
+ 
+// 消息
+message Message {
+   MessageType type = 1;
+   MessageData message_data = 2;
+   ReadData read_data = 3;
+   ReceiveData receive_data = 4;
+   string app_id = 5;
+
+   enum MessageType {
+      None = 0;
+      Message = 1;
+      Read = 2;
+      Receive = 3;
+      Heart = 4;
+   }
+}
+
+//已读
+message ReadData {
+   string message_id = 1;
+}
+
+//服务器接收到信息后返回
+message ReceiveData {
+   string message_id = 1;
+   uint64 send_time = 2;
+   uint64 receive_time = 3;
+   string target_id = 4;
+}
+
+
+//聊天消息消息
+message MessageData {
+    string data = 1;
+    MessageDataType type = 2;
+    string target_id = 3;
+    uint64 time = 4;
+    MessageStatus status = 5;
+    UserInfo user_info = 6;
+    string id = 7;
+
+    uint32 img_height = 8;
+    uint32 img_width = 9;
+    uint32 voice_time = 10; //单位 秒
+
+    enum MessageDataType {
+        None = 0;
+        Text = 1;
+        Image = 2;
+        Voice = 3;
+    }
+
+    enum MessageStatus {
+        NoneStatus = 0;
+        Unread = 3;
+        Read = 4;
+    }
+}
+
+//用户信息
+message UserInfo {
+   string id = 1;
+   string name = 2;
+   string avatar = 3; 
+}
