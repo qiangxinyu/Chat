@@ -8,8 +8,8 @@ var APNPush = require('./Push')
 // HTTP Server
 const http = require('http');
 
-const hostname = '192.168.1.4';
-const port = 3000;
+const hostname = '60.205.231.127';
+const port = 4000;
 
 const server = http.createServer((req, res) => {
     log('req.url',req.url)

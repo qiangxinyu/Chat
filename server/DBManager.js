@@ -4,8 +4,8 @@ var proto = require('./message_pb')
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : '',
-    database : 'mydb'
+    password : 'qiangxinyu',
+    database : 'Chat'
 });
 
 connection.connect(err => {

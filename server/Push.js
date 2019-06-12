@@ -1,9 +1,9 @@
 var apn = require('apn');
 var options = {
     token: {
-        key: "./AuthKey_SM8377RTEK.p8",
-        keyId: "SM8377RTEK",
-        teamId: "UAA3E7W55E"
+        key: "./AuthKey_743PGG5TNZ.p8",
+        keyId: "743PGG5TNZ",
+        teamId: "VVK7LQ64A3"
     },
     production: false
 };
