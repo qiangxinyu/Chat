@@ -8,7 +8,7 @@ var APNPush = require('./Push')
 // HTTP Server
 const http = require('http');
 
-const hostname = 'chat.pingche.xyz';
+const hostname = 'localhost';
 const port = 4000;
 
 const server = http.createServer((req, res) => {
@@ -47,7 +47,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    // console.log(`Server running at http://${hostname}:${port}/`);
 });
 
 
@@ -60,7 +60,7 @@ var wss = new WebSocketServer({ port: 3456 });
 var manager = []
 
 wss.on('connection', (ws, req) => {
-    console.log('client connected');
+    // console.log('client connected');
     let userWSInfo = req.url.slice(1)
     log(userWSInfo)
 
@@ -199,13 +199,13 @@ wss.on('connection', (ws, req) => {
     })
 
     ws.on('close', () => {
-        console.log('disconnected');
+        // console.log('disconnected');
         delete manager[[userID]]
     });
 
     ws.on('error', (e) => {
         delete manager[[userID]]
-        log('ws error',e)
+        // log('ws error',e)
     })
 })
 
@@ -240,5 +240,5 @@ function _typeof(obj){
 
 
 log = (...msg) => {
-    console.log(msg)
+    // console.log(msg)
 }
