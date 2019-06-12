@@ -8,7 +8,7 @@ var APNPush = require('./Push')
 // HTTP Server
 const http = require('http');
 
-const hostname = '60.205.231.127';
+const hostname = 'chat.pingche.xyz';
 const port = 4000;
 
 const server = http.createServer((req, res) => {
